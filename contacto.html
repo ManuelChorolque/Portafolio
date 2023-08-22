@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto</title>
 </head>
 <body>
-    <section>
+    <section class="contenido__contacto">
+        <h1 class="contenido__contacto__titulo">Formulario de Consultas</h1>
         <form action="/my-handling-form-page" method="post">
             <ul>
                 <li>
-                  <label for="name">Nombre:</label>
+                  <label class="contenido__contacto__nombre" for="name">Nombre:</label>
                   <input type="text" id="name" name="user_name" />
                 </li>
                 <li>
-                  <label for="mail">Correo electrónico:</label>
+                  <label class="contenido__contacto__correo" for="mail">Correo electrónico:</label>
                   <input type="email" id="mail" name="user_mail" />
                 </li>
                 <li>
-                  <label for="msg">Mensaje:</label>
+                  <label class="contenido__contacto__mensaje" for="msg">Mensaje:</label>
                   
                 </li>
                 <li>
                     <textarea id="msg" name="user_message"></textarea>
                 </li>
                 <li class="button">
-                    <button type="submit">Envíe su mensaje</button>
+                    <button class="contenido__contacto__boton" type="submit">Envíe su mensaje</button>
                 </li>
             </ul>
         </form>
