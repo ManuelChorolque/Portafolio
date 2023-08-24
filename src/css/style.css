@@ -1,33 +1,57 @@
+@keyframes slidein{
+    from{
+        margin-left:100%;
+        width: 300%;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
+}
 *{
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;  
 }
-.portada {  
+:root{
+    --fondo-color:lightseagreen;
+    --titu-color:rgb(42, 219, 19);
+    --text-color:aliceblue;
+    --button-color:rgb(42, 219, 19);
+    --text-color-hover:yellow;
+    --text-color-active:cyan;
+}
+.portada{  
+    animation-name: slidein;
+    animation-duration: 2s;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color:lightseagreen;
-}
-.portada__articulo {
-    text-align: center;
-}
-.portada__titulo {
-    font-size: 100px;
-    color: aliceblue;
-}
-.portada__nombre {
-    font-size: 60px;
+    background-color:var(--fondo-color);
     padding: 20px;
 }
-.portada__contenido {
+.portada__articulo{
+    text-align: center;
+}
+.portada__titulo{
+    font-size: 150px;
+    color:var(--titu-color);
+}
+.portada__nombre{
+    font-size: 60px;
+    color: var(--text-color);
+    padding: 20px;
+}
+.portada__contenido{
     font-size: 50px;
+    color: var(--text-color);
+    padding: 20px;
 }
 .portada__entrar{
     border-radius: 30%;
-    background-color:forestgreen; 
+    background-color:var(--button-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,58 +60,73 @@
     font-family: cursive;
     text-decoration: none; 
 }
+.portada__entrar:active{
+    color: var(--text-color-active);
+}
+.portada__entrar:hover{
+    color:var(--text-color-hover);
+}
 .portada__img{
     width: 180px;
     height: 110px;
     border-radius: 30%;
 }
-
-
-.cabecera {
+.cabecera{
     text-align: center;
-    background-color: #007bff;
+    background-color: #36d0db;
     color: white;
     padding: 30px 0;
 }
-
-.cabecera__titulo {
+.cabecera__titulo1{
+    background-color:rgb(9, 120, 128);
+    font-size: 56px;
+}
+.cabecera__titulo2{
+    background-color:rgb(63, 149, 155);
     font-size: 36px;
 }
 
-.cabecera__texto {
-    font-size: 18px;
-    padding: 20px;
+.cabecera__texto{ 
+    background-color:rgb(129, 199, 204);
+    font-size: 28px;
 }
-
-.cabecera__img {
+.cabecera__img{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    padding: 10px;
+    padding: 3px;
 }
-
-.cabecera__nombre {
-    font-size: 24px;
+.cabecera__nombre{
+    background-color:rgb(106, 243, 253);
+    font-size: 34px;
 }
-
-.contenido__articulo {
+.contenido__articulo{
     padding: 20px;
     background-color: #f5f5f5;
 }
-
-.contenido__subtitulo {
+.contenido__subtitulo{
     font-size: 24px;
+    margin-left: 5px;
     padding: 15px 0px;
 }
-
-.contenido__texto {
+.contenido__texto{
     font-size: 16px;
+}
+.contenido__subtitulo__texto{
+    font-size: 16px;
+    margin-left: 30px;
     padding: 10px;
 }
-
-.contenido__opciones {
+.contenido__opciones{
     font-size: 16px;
-    margin-left: 20px;
+    margin-left: 30px;
+    padding: 10px 0px;
+}
+.contenido__titulo{
+    background-color:rgb(9, 120, 128);
+    color: white;
+    text-align: center;
+    font-size: 45px;
 }
 .abajo {
     background-color: #333;
@@ -95,17 +134,57 @@
     padding: 30px 0;
     text-align: center;
 }
-.abajo__subtitulo {
+.abajo__subtitulo{
     font-size: 24px;
     margin-bottom: 10px;
 }
-.abajo__texto {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
+.abajo__contacto{
+    color: blue;
+    font-size: 24px;
+    text-decoration: none;
+}
+.abajo__contacto:active{
+    color: var(--text-color-active);
+}
+.abajo__contacto:hover{
+    color:var(--text-color-hover);
+}
+.contenido__ubicacion{
+    display: flex;
+    justify-content: center;
+}
+.contenido__ubicacion__button{
+    background-color: rgb(18, 122, 87);
+    border-radius: 20%;
+    font-size: 20px;
+}
+.coment{
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.coment label{
+    margin-bottom: 5px;
+}
+.coment input[type="text"],
+.coment textarea{
+    width: 100%;
+    padding: 10px;
     margin-bottom: 10px;
 }
-.abajo__texto a:hover {
-    text-decoration: underline;
+.boton{
+    display: flex;
+    justify-content: center;
 }
-
+.boton__enviar{
+    background-color: #00f7ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.linea{
+    background-color:aquamarine;
+    height: 20px;
+}
