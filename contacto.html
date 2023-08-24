@@ -7,23 +7,29 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <section class="contenido__contacto">
-        <h1 class="contenido__titulo">Formulario de Consultas</h1>
-        <form action="/my-handling-form-page" method="post">
-          <div class="coment">
-            <label class="contenido__subtitulo" for="name">Nombre:</label>
-            <input type="text" id="name" name="user_name" />
-         
-            <label class="contenido__subtitulo" for="mail">Correo electrónico:</label>
-            <input type="email" id="mail" name="user_mail" />
-        
-            <label class="contenido__subtitulo" for="msg">Mensaje:</label>
-            
-        
-            <textarea id="msg" name="user_message"></textarea>
+  <header class="cabecera__contacto"></header>
+
+  <section>
+    <h1 class="linea"></h1>
+    <h1 class="contenido__titulo">Formulario de Consultas</h1>
+    <form action="/my-handling-form-page" method="post">
+      <div class="coment">
+        <label class="contenido__subtitulo" for="name">Nombre:</label>
+        <input type="text" id="name" name="user_name" />
     
-            <button type="submit">Enviar</button>
-          </div>
-    </section> 
+        <label class="contenido__subtitulo" for="msg">Mensaje:</label>
+        
+    
+        <textarea id="msg" name="user_message"></textarea>
+        <div class="contenido__ubicacion">
+          <button class="contenido__ubicacion__button" type="submit">Enviar</button>
+        </div>
+        
+      </div>
+    </form>
+    <h1 class="linea"></h1>
+  </section> 
+
+  <footer class="abajo"></footer>
 </body>
 </html>
